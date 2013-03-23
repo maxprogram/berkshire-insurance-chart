@@ -1,0 +1,62 @@
+#insuranceChart {
+  padding: 0px 20px;
+
+  svg {
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-size: 11px;
+  }
+
+  .bar {
+    rect { shape-rendering: crispEdges }
+    .odd   { fill: #f2f2f2 }
+    .even  { fill: #fff }
+    .float { fill: #6ba2f4 }
+    .cost  { fill: black }
+    .bond  { fill: gray }
+    &:hover {
+      .odd,
+      .even { fill: #fefcc7 }
+      .float { fill: #337be7 }
+    }
+  }
+
+  .notes { fill: gray }
+
+  .key {
+    font-size: 14px;
+    fill: #000;
+  }
+
+  .labels {
+    fill: white;
+  }
+
+  .axis {
+    shape-rendering: crispEdges;
+  }
+
+  .x.axis {
+    fill: gray;
+    path {
+      stroke: none;
+      fill: none;
+    }
+    line {
+      stroke: #fff;
+      stroke-opacity: .8;
+    }
+    &.b line {
+      stroke: none;
+    }
+    .line,
+    &.b .line {
+      stroke: gray;
+    }
+  }
+
+  .y.label {
+    font-size: 13px;
+    font-weight: bold;
+  }
+
+}
